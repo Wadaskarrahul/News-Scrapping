@@ -1,68 +1,47 @@
-News Scraper
 
-Overview
+# News Scraper
+
+### Overview
 
 This project is a Python-based News Scraper that fetches the latest news articles from the BBC RSS feed, extracts their content, and saves them in a structured JSON file. It uses multi-threading to improve performance and includes error handling and logging.
 
-Features
 
-Fetches news article metadata from BBC's RSS feed.
 
-Uses newspaper3k to extract full article content.
+## Features
 
-Implements multi-threading to scrape multiple articles efficiently.
+- Fetches news article metadata from BBC's RSS feed.
+- Uses newspaper3k to extract full article content.
+- Implements multi-threading to scrape multiple articles efficiently.
+- Saves extracted data in a structured JSON format.
+- Includes error handling and logging for better debugging.
 
-Saves extracted data in a structured JSON format.
 
-Includes error handling and logging for better debugging.
 
-Technologies Used
+## Technologies Used
 
-Python
+- Python
 
-feedparser (For RSS feed parsing)
+- feedparser (For RSS feed parsing)
+- newspaper3k (For web scraping full articles)
+- concurrent.futures (For multi-threading)
+- json (For storing scraped data)
+- logging (For error logging)
 
-newspaper3k (For web scraping full articles)
+## Installation
 
-concurrent.futures (For multi-threading)
-
-json (For storing scraped data)
-
-logging (For error logging)
-
-Installation
-
-Prerequisites
+### Prerequisites
 
 Ensure you have Python installed (Python 3.x recommended). Install dependencies using:
 
+
+```
 pip install feedparser newspaper3k
+```
 
-Usage
+## Output
 
-Running the Script
+- The script prints article details (title, author, date, content snippet).
 
-To run the script, execute:
+- Scraped data is saved to articles.json.
 
-python news_scraper.py
-
-Output
-
-The script prints article details (title, author, date, content snippet).
-
-Scraped data is saved to articles.json.
-
-Errors (if any) are logged in news_scraper.log.
-
-JSON Output Format
-
-The extracted articles are saved in the following format:
-
-[
-  {
-    "title": "Article Title",
-    "authors": ["Author Name"],
-    "publish_date": "YYYY-MM-DD",
-    "text": "Extracted article content..."
-  }
-]
+- Errors (if any) are logged in news_scraper.log.
